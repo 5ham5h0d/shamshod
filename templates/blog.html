@@ -1,0 +1,479 @@
+{% include "header.html" %}
+<header id="home" class="header1">
+    <div class="overlay"></div>
+    <div class="header-content container">
+        <h1>Welcome to
+            Shamshod's blog
+        </h1>
+        <br>
+        <p class="header-subtitle">Glad to see you here! I hope you will enjoy</p>
+    </div>
+</header>
+<br>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="#">Enjoy!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Informations
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#python">Why Python</a>
+                    <a class="dropdown-item" href="#ai">AI</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#blockchain">Blockchain</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Python
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#morse">Morse code</a>
+                    <a class="dropdown-item" href="#">RDJ</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#extract">Video to mp3</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Web design
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#responsive">Responsive website</a>
+                    <a class="dropdown-item" href="#texture">Texture</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#colours">Colours</a>
+                </div>
+
+        </ul>
+
+    </div>
+</nav>
+<hr>
+<br><br>
+<section class="more" id="python">
+    <img src="static/assets/imgs/python.jpg" class="responsive">
+    <br>
+    <hr>
+    <h1>Why Python?</h1>
+    <p>
+        Python has emerged as one of the most popular programming languages over the years. It is a high-level,
+        interpreted language that is easy to learn and use. Python was created by Guido van Rossum in the late 1980s and
+        was released in 1991. Guido van Rossum named it after Monty Python since he was a fan of the comedy group.
+        <br>
+        Python is an open-source language that is supported by a large community of developers. The community is active
+        in developing and maintaining a wide range of libraries and frameworks that can be easily accessed through
+        Python’s package manager, pip. Python is well-suited for a variety of tasks, including web development, data
+        analysis, automation, and artificial intelligence.
+        <br>
+        Python has been used by some of the largest software companies in the world. Google, Dropbox, Instagram, and
+        Spotify are some of the most notable examples. Google’s YouTube is built on Python, as are many of its internal
+        tools. Dropbox uses Python for its backend infrastructure and automation tasks. Instagram is entirely built on a
+        Python web framework called Django, which has been used to build other popular websites such as Pinterest and
+        Mozilla.
+        <br>
+        Python is a powerful programming language due to its simplicity, versatility, and extensive library support.
+        Python’s syntax is easy to read and understand, making it an ideal choice for beginners. It also has a large and
+        active community of developers who have created a wide range of libraries and frameworks that can be used to
+        quickly build complex applications.
+        <br>
+        Python supports multiple programming paradigms, including object-oriented, procedural, and functional
+        programming. This flexibility makes it easy to write code that is both efficient and easy to maintain.
+        Additionally, Python’s large standard library contains modules that can be used for a variety of tasks, such as
+        web development, scientific computing, and graphical user interfaces.
+        <br>
+        In conclusion, Python is a powerful programming language with a rich history and a strong community. It is used
+        by some of the largest software companies in the world and is well-suited for a variety of tasks. Whether you
+        are a beginner or an experienced developer, Python is a versatile and easy-to-use language that can help you to
+        build great applications.
+    </p>
+    <br>
+    <hr>
+</section>
+<section class="more" id="morse">
+    <img src="static/assets/imgs/morse.jpg" class="responsive">
+    <br>
+    <hr>
+    <h1 style="color:#2C3333;">Convert text to morse code in python</h1>
+    <h6>What is the morse alphabet?</h6>
+    <p> Morse alphabet is a method of transmitting text information as a series of on-off tones,
+        lights, or clicks that can be directly understood by a skilled listener
+        or observer without special equipment.
+        It is named for Samuel F. B. Morse, an inventor of the telegraph.</p>
+    <br>
+    <img src="static/assets/imgs/morse_alp.jpg" class="responsive">
+    <hr>
+
+    <h6>Encryption </h6>
+    <p>~In the case of encryption, we extract each character from a word one at a time and match it with its
+        corresponding morse code stored in whichever data structure we have chosen.<br>
+        ~Store the morse code in a variable that will contain the encoded string and then we add a space to our string
+        that will contain the result.<br>
+        ~While encoding in morse code we need to add 1 space between every character and 2 consecutive spaces between
+        every word.<br>
+        ~If the character is a space then add another space to the variable containing the result.
+        We repeat this process till we traverse the whole string </p>
+    <hr>
+    <h5>Allright! let's start coding!</h5>
+    <p> First. We need dictionary takes english alphabets as keys and morse alphabets as value</p>
+    <pre><code> alphabet={
+  'A': ".-", 'B': "-...", 'C': "-.-.", 'D': "-..",'E': ".", 'F': "..-.",'G': "--.",
+  'H': "....",'I': "..", 'J': ".---", 'K': "-.-",'L': ".-..", 'M': "--", 'N': "-.",
+  'O': "---", 'P': ".--.", 'Q': "--.-",,'R': ".-.", 'S': "...", 'T': "-", 'U': "..-",
+  'V': "...-",'W': ".--", 'X': "-..-", 'Y': "-.--", 'Z': "--..",}
+           </code></pre>
+    <hr>
+    <br>
+    <p>Then, we must ask user what word they want to encrypt. We should separate characters in strings and append them
+        to the list.
+        Now, we have to capitalize all character.</p>
+
+    <pre><code>    ask_user = input("Which word do you wanna encrypt:")
+    word_list =list>(ask_user)
+    morse_code=[]
+    for in word_list:
+         morse_code.append(alphabet[f'{l. class="func">capitalize()}'])</code></pre>
+    <br>
+    <hr>
+    <p>Finally, we can take every character's value (morse alphabets) in dictionary and replace them with english
+        alphabets. </p>
+    <pre><code>    x_string= ''.join(map(str, morse_code))
+    print(x_string)
+</code></pre>
+    <h5> Here is the full code:</h5>
+    <pre><code> alphabet={
+  'A': ".-", 'B': "-...", 'C': "-.-.", 'D': "-..",'E': ".", 'F': "..-.",'G': "--.",
+  'H': "....",'I': "..", 'J': ".---", 'K': "-.-",'L': ".-..", 'M': "--", 'N': "-.",
+  'O': "---", 'P': ".--.", 'Q': "--.-",,'R': ".-.", 'S': "...", 'T': "-", 'U': "..-",
+  'V': "...-",'W': ".--", 'X': "-..-", 'Y': "-.--", 'Z': "--..",}
+
+  ask_user = input("Which word do you wanna encrypt:")
+  word_list =list>(ask_user)
+  morse_code=[]
+  for in word_list:
+      morse_code.append(alphabet[f'{l. class="func">capitalize()}'])
+
+  x_string= ''.join(map(str, morse_code))
+  print(x_string)
+    </code></pre>
+    <br>
+    <hr>
+    <section class="more" id="ai">
+        <img src="static/assets/imgs/ai.jpg" class="responsive">
+        <br> <br>
+        <h1>Artificial Intelligences (AI) are the next big thing</h1>
+        <br>
+        <p>Artificial Intelligence (AI) is no longer just a concept we see in Hollywood movies. It has permeated every
+            aspect of our lives, from the way we shop to the way we work. AI is changing the way we live and work, and
+            there is no denying its impact on our society.
+            <br>
+            AI is the ability of machines to perform tasks that typically require human intelligence, such as visual
+            perception, speech recognition, decision-making, and language translation. Through machine learning, AI
+            systems can improve their performance over time as they analyze data and learn from the results.
+            <br>
+            One of the most exciting applications of AI is in healthcare. AI is being used to assist doctors in making
+            more accurate diagnoses, predicting disease outbreaks, and even developing new treatments. AI algorithms are
+            being trained to analyze large amounts of patient data and identify patterns that human experts might miss.
+            <br>
+            In the finance industry, AI is being used to develop smarter investment strategies, identify fraud, and
+            streamline processes. AI is also being used in customer service, where chatbots can provide instant support
+            to customers 24/7. AI-powered virtual assistants, like Siri and Alexa, are becoming more and more popular as
+            they help people manage their daily lives.
+            <br>
+            However, there are also concerns about the impact of AI on jobs, privacy, and security. As machines become
+            more intelligent, they may replace human workers in certain industries. There are also concerns about data
+            privacy and security, as AI algorithms require large amounts of data to be trained.
+            <br>
+            Despite these concerns, the potential benefits of AI are hard to ignore. AI has the power to transform
+            industries, boost productivity, and improve people's lives. As we continue to develop and refine AI
+            technology, it's important that we also address these concerns to ensure that AI is used ethically and
+            responsibly.
+            <br>
+            In conclusion, AI is shaping our world in ways we never thought possible. From healthcare to finance, AI is
+            transforming industries and changing the way we live and work. While there are concerns about the impact of
+            AI, the potential benefits are too great to ignore. We must continue to develop AI technology ethically and
+            responsibly to ensure a better future for all. (By the way, this blog is also writen by Ai )</p>
+
+    </section>
+    <br>
+    <hr>
+    <section class="more" id="texture">
+        <img src="static/assets/imgs/texture.jpg" class="responsive">
+        <h1>What is Texture in Web Design & Why is it so Important?</h1>
+        <br>
+        <p>Texture, or the appearance of elements on a webpage, has become highly influential for web design. Not only
+            does texture add more visual interest and creativity to a website, but it also informs the user's
+            experience. For example, a website with neutral colors and minimalistic textures may look more professional
+            and clean whereas one with vivid colors and textures may look more playful and inviting. Texture is an
+            important element for any web designer because it helps create an identity for the website as well as
+            increasing engagement. Textures can be used in conjunction with textual elements like headlines, titles,
+            call-to-actions to create the perfect harmony between written words and graphical visuals which translates
+            into a better overall engagement by giving users a richer experience. It adds a sense of realism and depth
+            to a website and helps create an emotional connection between the visitor and the content on the website.
+            Texture in web design can be achieved through the use of images, fonts, shapes, and other visuals. Textures
+            can also be used to create interesting layouts which help enhance user experience. By combining different
+            textures with different writing styles, it enables web designers to create visually appealing designs that
+            evoke emotions from website visitors. Therefore, texture plays an essential role in making web design
+            engaging and successful.</p>
+        <br>
+        <h6>Categories of texture</h6>
+        <p> There are three categories of texture: tactile, visual, and audible. Tactile texture is the feel of a
+            material to human touch. Visual texture affects how an object or room looks, and audible texture affects how
+            the object or room sounds. Depending on the surfaces of materials used, sounds in a room can be amplified
+            (made louder) or dampened (made softer). Audible texture also refers to how a surface sounds when rubbed.
+            Touch texture!</p>
+        <br>
+        <h3>Examples</h3>
+        <br>
+        <div class="row">
+            <div class="col"><img src="static/assets/imgs/texture1.jpg" class="responsive"></div>
+            <br>
+            <div class="col"><img src="static/assets/imgs/texture2.jpg" class="responsive"></div>
+            <br>
+            <div class="w-100"></div>
+            <br>
+            <div class="col"><img src="static/assets/imgs/texture3.jpg" class="responsive"></div>
+            <br>
+            <div class="col"><img src="static/assets/imgs/texture4.jpg" class="responsive"></div>
+            <br>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <section class="more" id="rdj">
+        <img src="static/assets/imgs/rdj.gif" class="responsive">
+        <br>
+        <h1>Drawing RDJ photo in python</h1>
+        <h6>About <a href="https://pypi.org/project/sketchpy/">sketchpy</a></h6>
+        <p>One of the my favourite python package is <a href="https://pypi.org/project/sketchpy/">sketchpy</a>.
+            You can draw a lot of celebrities like Robert Downey Jr,BTS,Vijay and others. It is created with
+            Turtle, Open-cv, Pillow and Svgpathtools.
+
+        </p>
+        <h6>Install</h6>
+        <pre><code>
+  pip install sketchpy
+    </code></pre>
+        <br>
+        <p>it should probably work, If not then try the following code</p>
+        <pre><code>
+        pip install turtle open-cv wheel sketchpy
+    </code></pre>
+        <h6>Drawing RDJ</h6>
+        <pre><code>
+    from sketchpy import library as lib
+
+
+    obj = lib.rdj()
+    obj.draw()
+    </code></pre>
+
+    </section>
+    <br>
+    <hr>
+    <section id="extract" class="more">
+        <img src="static/assets/imgs/extracter.jpg" class="responsive">
+        <br>
+        <h1>mp4 to mp3 (with <a
+                href="https://pypi.org/project/moviepy/#:~:text=MoviePy%20(full%20documentation)%20is%20a,for%20some%20examples%20of%20use.">moviepy</a>)
+        </h1>
+        <br>
+        <pre><code>
+            # import moviepy
+            import moviepy
+            import moviepy.editor as mve
+            #PUT YOUR VIDEO PATH
+            video=mve.VideoFile.Clip(VIDEOPATH)
+            audio=video.audio
+            audio.write_audiofile('newaudio.mp3')
+        </code></pre>
+    </section>
+    <br>
+    <hr>
+    <section id="blockchain"  class="more">
+        <img src="static/assets/imgs/blockchain.jpg" class="responsive">
+        <br>
+        <h1>Blockchain</h1>
+        <h6>How blockchain works?</h6>
+        <p>Blockchain is a distributed and decentralized digital ledger that keeps a record of all transactions made on
+            a network. It works through a consensus mechanism, where nodes on the network validate transactions and add
+            them to the blockchain.
+            <br>
+            Here are the steps of how blockchain works:
+            <br>
+            1. A transaction is initiated and broadcast to the nodes on the network. The transaction contains
+            information such as the sender, receiver, and amount.
+            <br>
+            2. The nodes on the network validate the transaction using a consensus mechanism. Depending on the
+            blockchain, this can be proof-of-work, proof-of-stake, or other consensus mechanisms.
+            <br>
+            3. Once the transaction is validated, it is added to a block, which includes a unique code called a hash.
+            <br>
+            4. The block is then broadcast to the network and added to the blockchain. Each block contains the hash of
+            the previous block, creating a chain of blocks, hence the name blockchain.
+            <br>
+            5. The blockchain is then distributed to all the nodes on the network, creating a decentralized ledger that
+            everyone can see.
+            <br>
+            6. Once a block is added to the blockchain, it cannot be changed. If someone wants to change a transaction,
+            they would have to change all the blocks in the chain, which is extremely difficult and almost impossible.
+            This makes the blockchain extremely secure.
+            <br>
+        </p>
+        <h6>Usage of blockchain</h6>
+        <p>Blockchain technology has numerous use cases across various industries. Here are some of the most common use
+            cases of blockchain:
+            <br>
+            1. Cryptocurrencies: The most well-known use case of blockchain is cryptocurrencies. Bitcoin, Ethereum, and
+            other digital currencies use blockchain technology to store transactions and ensure their security.
+            <br>
+            2. Supply Chain Management: Blockchain can be used to track products and materials across the supply chain,
+            ensuring transparency and eliminating fraud.
+            <br>
+            3. Identity Management: Blockchain can be used to create secure, decentralized identity management systems
+            that protect personal data and prevent identity theft.
+            <br>
+            4. Voting Systems: Blockchain can be used to create secure and transparent voting systems that are resistant
+            to hacking and fraud.
+            <br>
+            5. Smart Contracts: Blockchain can be used to create self-executing contracts that automatically execute
+            when certain conditions are met.
+            <br>
+            6. Health Records: Blockchain can be used to securely store and share health records, improving patient
+            privacy and reducing medical fraud.
+            <br>
+            7. Real Estate: Blockchain can be used to streamline and digitize the real estate transaction process,
+            ensuring transparency and reducing fraud.
+            <br>
+            8. Digital Rights: Blockchain can be used to protect and manage digital rights for music, movies, and other
+            forms of intellectual property.
+            <br>
+        </p>
+        <h6>Conclusion:</h6>
+        <p>
+            Overall, blockchain is an innovative technology that provides a secure and transparent way of recording and
+            storing transactions, without the need for intermediaries. It has the potential to transform various
+            industries, including finance, healthcare, and supply chain management.
+        </p>
+    </section>
+    <br>
+    <hr>
+    <section id="responsive" class="more">
+        <img src="static/assets/imgs/responsive.jpg" class="responsive">
+        <br>
+        <h1>Responsive website</h1>
+        <h6>What is responsive website</h6>
+        <p>A responsive website is a website that is designed and developed to adapt to various screen sizes and
+            devices, such as smartphones, tablets, laptops, and desktops. This means that the website is able to adjust
+            its layout, content, and features to provide the best possible user experience regardless of the device
+            being used. Responsive websites are typically built using a combination of fluid grid layouts, flexible
+            images, and media queries that allow the site to respond to the size and orientation of the user's screen.
+            This ensures that the website looks and functions correctly on any device, increasing its usability and
+            accessibility for all users.</p>
+        <h6>It's importance</h6>
+        <p>The importance of responsive website design can be summed up in three main points:
+            <br>
+            1. Mobile usage is increasing: With the increasing usage of mobile devices, it has become necessary for
+            websites to adapt to different screen sizes and resolutions. A responsive website ensures that your website
+            looks great and functions well on any device, including smartphones and tablets.
+            <br>
+            2. Better user experience: Responsive design ensures that users can easily navigate and interact with your
+            website, which leads to a better user experience. A positive user experience increases the likelihood that
+            users will stay on your site longer, engage with your content, and ultimately convert into customers.
+            <br>
+            3. Improved SEO: Google and other search engines prioritize responsive websites. By having a responsive
+            design, your website will have a better chance of ranking higher in search engine results pages (SERPs).
+            This is because responsive websites have a single URL and the same HTML code, which makes it easier for
+            search engines to crawl and index.
+            <br>
+        </p>
+        <h6>Examples</h6>
+        <p>
+            Here are some great examples of responsive websites:
+            <br>
+            1. <a href="https://www.starbucks.com/">Starbucks</a>: The Starbucks website is a great example of
+            responsive design. It adapts well to different
+            screen sizes, and its images and content adjust dynamically.
+            <br>
+            2. <a href="https://www.airbnb.com/">Airbnb</a>: Airbnb's website is another great example of a responsive
+            website. Its
+            clean design and
+            easy-to-use interface look great on a variety of devices, from desktops to smartphones.
+            <br>
+            3. <a href="https://www.theguardian.com/">The Guardians</a>: The Guardian's responsive website is a great
+            example of how a news website can successfully
+            adapt to different screen sizes. Its clean design and easy-to-use interface look great on any device.
+            <br>
+            4. <a href="https://www.fitbit.com/global/us/home">Fitbit</a>: Fitbit's website is an excellent example of
+            how a product-focused website can work well with
+            responsive design. Its layout is optimized for a variety of screen sizes, and its product images and
+            descriptions are easy to view and interact with.
+            <br>
+            5. <a href="https://www.apple.com/">Apple</a>: Apple's website is a great example of how a website can adapt
+            to different screen sizes without
+            sacrificing its visual identity. Its clean design and bold typography look great on any device.
+            <br><br>
+            These are just a few examples of responsive websites. There are countless other examples out there, from
+            small businesses to large corporations, that have successfully implemented responsive design to improve the
+            user experience and increase engagement.
+        </p>
+        <h6>Conclusion</h6>
+        <p>
+            Responsive website is essential in today's digital world as more and more people access the internet using
+            mobile devices. Responsive design ensures that websites look great and function well on any screen size,
+            from smartphones to desktops. Not only does responsive design improve the user experience, it also helps
+            websites rank higher in search engine results pages and can increase conversion rates. Successful examples
+            of responsive design can be seen on websites of all sizes, from small businesses to large corporations.
+            Overall, a responsive website is a must-have for any business looking to succeed online.
+        </p>
+    </section>
+    <br>
+    <hr>
+    <section class="more" id="colours">
+        <img src="static/assets/imgs/color.jpg" class="responsive">
+        <br>
+        <h1>Colours</h1>
+        <h6>Importance</h6>
+        <p>
+            Colors are important in web design for several reasons:
+            <br>
+            1. Branding: Colors can help establish and reinforce a brand's personality and identity. The right color
+            scheme can make a brand easily recognizable and memorable.
+            <br>
+            2. Emotion: Colors can evoke certain emotions and feelings in viewers. For example, red can communicate
+            excitement and passion while blue can convey trust and reliability.
+            <br>
+            3. Readability: Colors can affect how easy or difficult it is to read text on a website. Choosing the right
+            background color and text color can make a website more readable and user-friendly.
+            <br>
+            4. Navigation: Colors can also be used to differentiate between different sections of a website and guide
+            users through the navigation process.
+            <br>
+        </p>
+        <h6>Meaning of every colour</h6>
+        <p>Colors have different meanings and interpretations based on culture, context, and personal experiences.
+            However, here are some common associations and meanings of colors:
+<br>
+      <br>      1. Red: passion, love, energy, danger, excitement, urgency, courage
+       <br>     2. Orange: creativity, enthusiasm, warmth, fun, playfulness, confidence
+       <br>     3. Yellow: happiness, joy, optimism, warmth, caution, cowardice
+       <br>     4. Green: nature, balance, harmony, growth, safety, envy
+       <br>     5. Blue: trust, loyalty, calmness, stability, intelligence, sadness
+       <br>     6. Purple: royalty, luxury, power, creativity, spirituality, mystery
+       <br>     7. Pink: love, femininity, innocence, sweetness, nurture
+       <br>     8. Brown: earthiness, simplicity, reliability, stability, comfort
+       <br>     9. Gray: neutrality, professionalism, sophistication, formality, dullness
+       <br>     10. Black: power, mystery, elegance, sophistication, fear, sadness
+       <br>     11. White: purity, innocence, cleanliness, clarity, peace</p>
+    </section>
+
+    {% include "footer.html" %}
